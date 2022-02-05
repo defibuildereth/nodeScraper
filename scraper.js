@@ -11,16 +11,5 @@ const puppeteer = require('puppeteer');
     const extractedText = await page.$eval('*', (el) => el.innerText)
     console.log(extractedText)
 
-    // const scrape_minting_info = await page.evaluate(() => {
-    //     let bond_discounts =
-    //         document.querySelector('p', 'h2').innerText;
-    //     return bond_discounts
-    // })
-
-    // scrape_minting_info()
-
-    // await page.screenshot({ path: 'example.png' });
-
-
     await browser.close();
 })();
